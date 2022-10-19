@@ -1,0 +1,27 @@
+{
+  "name": "ln-homes",
+  "version": "1.0.1",
+  "description": "LN Homes website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raghav Bajaj",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "firebase": "^9.12.1",
+    "webpack": "^5.74.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RRB230899/LN-Homes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RRB230899/LN-Homes/issues"
+  },
+  "homepage": "https://github.com/RRB230899/LN-Homes#readme"
+}

@@ -1,0 +1,250 @@
+@keyframes button-shadow {
+    from {
+        transform: rotate(0);
+        bottom: -5px;
+        right: -5px;
+        opacity: 1;
+   }
+    to {
+        transform: rotate(40deg);
+        bottom: 50px;
+        right: -60px;
+        opacity: 0;
+   }
+}
+@keyframes button-arrow-rotate {
+    0% {
+        width: 15px;
+        margin: -25px auto 0;
+   }
+    1% {
+        width: 10px;
+        height: 0px;
+        margin-top: 15px;
+        transform: rotate(45deg);
+   }
+    100% {
+        width: 10px;
+        margin-top: 15px;
+        transform: rotate(45deg);
+        height: 35px;
+   }
+}
+@keyframes button-arrow-down {
+    from {
+        bottom: -25px;
+        opacity: 1;
+   }
+    to {
+        bottom: -40px;
+        opacity: 0;
+   }
+}
+@keyframes button-arrow-up {
+    0% {
+        height: 20px;
+        transform: rotateZ(45deg);
+        right: -7px;
+   }
+    1% {
+        right: 0px;
+        height: 10px;
+        width: 0;
+        transform: rotateZ(0);
+   }
+    100% {
+        right: 0px;
+        height: 10px;
+        width: 20px;
+        transform: rotateZ(0);
+   }
+}
+
+.btn-download {
+    background-color: #fff;
+    width: 140px;
+    height: 70px;
+    border: none;
+    outline: none;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding-top: 10px;
+}
+
+button .arrow {
+    height: 25px;
+    width: 15px;
+    background-color: #c1886d;
+    border-radius: 2px;
+    margin: -25px auto 0;
+    position: relative;
+}
+
+button .arrow:after {
+    content: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background-color: #c1886d;
+    border-radius: 2px;
+    transform: rotateZ(45deg) translate(1px, 7px);
+    bottom: 0;
+    right: -7px;
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+}
+
+button .arrow:before {
+    content: '';
+    background-color: #c1886d;
+    width: 25px;
+    height: 10px;
+    position: absolute;
+    left: -5px;
+    bottom: -25px;
+    border-radius: 2px;
+    transition: all 0.5s;
+}
+
+.btn-download:after, .btn-download:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background-color: #c1886d;
+    height: 100%;
+    width: 100%;
+    bottom: -5px;
+    right: -5px;
+    border-radius: 5px;
+}
+
+.btn-download:after {
+    animation-play-state: pause;
+}
+
+.btn-download:active {
+    width: 180px;
+    height: 90px;
+}
+
+.btn-download:focus:after {
+    animation: button-shadow 1s;
+}
+
+button:focus .arrow {
+    animation: button-arrow-rotate 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+button:focus .arrow:after {
+    animation: button-arrow-up 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+button:focus .arrow:before {
+    animation: button-arrow-down 0.5s forwards;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+} 
+
+.login-help{
+  font-size: 12px;
+}
+
+.login-btn {
+  text-align:center;
+  margin-top: 50px;
+}

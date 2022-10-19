@@ -1,0 +1,19 @@
+1. Need to fix the navbar width for 768px - 964px    ----  DONE!!
+
+2. Styling of navbar /  Replacement of Navbar    ----  DONE!!
+
+3. Footer section
+
+4. Logo of Easy Finance Facility.    ----  DONE!!
+
+5. If possible, fixed header.    ----  DONE!!
+
+6. Scroll to the top button fading(if possible). // No need.
+
+7. Need to confirm content with Ashrut.
+
+8. Checking database.    ----  DONE!!
+
+https://alvarotrigo.com/blog/hamburger-menu-css/
+
+https://www.twilio.com/blog/international-phone-number-input-html-javascript // for country validation

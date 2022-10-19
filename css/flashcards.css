@@ -1,0 +1,115 @@
+@media (max-width: 767px) and (min-width: 324px) {
+	.flashcard-mob-view {
+		padding-left: calc(23% - 40px) !important;
+		padding-top: 20px !important;
+		width: 22.3rem !important;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.hover-flashcards {
+		display: none !important;
+	}
+
+	.click-flashcards {
+		display: flex !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.flip-card-flex {
+	margin: 0 -15px 0 -15px; display: flex; justify-content: center; padding-top: 20px;
+}	
+}
+
+.flip-card {
+	background-color: transparent;
+	width: 300px;
+	height: 300px;
+	perspective: 1000px;
+  }
+  
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.flip-card-front {
+	background-color: #bbb;
+	color: black;
+}
+
+.flip-card-back {
+	background-color: #ba000d;
+	color: #fff;
+	transform: rotateY(180deg);
+	padding-top: 3rem;
+}
+
+.hover-flashcards {
+	display: flex;
+	color: #000000;
+	letter-spacing: 0 !important;
+}
+
+.click-flashcards {
+	display: none;
+	color: #000000;
+	letter-spacing: 0 !important;
+}
+
+.text-heading {
+	text-align: center; 
+	font-family: 'Proxima Nova'; 
+	font-size: 18px; 
+	color: #000000;
+}
+
+h2 {
+	text-align: center; 
+	font-family: impact, sans-serif; 
+	font-size: 28px; 
+	font-weight: 600; 
+	color: #c1886d;
+}
+
+.heading-text-black{
+	top: 6rem; 
+	color: #000000;
+}
+
+.heading-text-white{
+	top: 6rem; 
+	color: #fff;
+}
+
+.body-text-black{
+	color: #000000; 
+	padding-top: 2rem; 
+	letter-spacing: 0 !important; 
+	font-weight: 500;
+}
+
+.body-text-white{
+	color: #fff; 
+	padding-top: 2rem; 
+	letter-spacing: 0 !important; 
+	font-weight: 500;
+}

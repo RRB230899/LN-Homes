@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
+.brochure-content {
+    margin-top: -0.5em;
+	font-family: 'Pirata One', cursive;
+	font-size: 2rem;
+	color: #c1886d;
+	text-align: center;
+	font-weight: 600;
+}
+
+.brochure-content span{
+    font-size: 0.8em;
+}
+
+.brochure-content-click {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+    color: #000000;
+}

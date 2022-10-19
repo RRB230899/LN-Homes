@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>LN Homes</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/loader.css">
+	<link rel="stylesheet" type="text/css" href="css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="css/flashcards.css">
+	<link rel="stylesheet" type="text/css" href="css/navigation.css">
+	<link rel="stylesheet" type="text/css" href="css/separator.css">
+	<link rel="stylesheet" type="text/css" href="css/brochure.css">
+	<link rel="stylesheet" type="text/css" href="css/brochureText.css">
+	<link rel="stylesheet" type="text/css" href="css/contact_form.css">
+	<link rel="stylesheet" type="text/css" href="css/socialLinks.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+<!--===============================================================================================-->
+</head>
+<style>
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  letter-spacing: 1.1px;
+  background-color: #ebebeb;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+	justify-content: center;
+	font-size: 16px;
+	font-family: 'Proxima Nova';
+}
+
+li {
+	list-style-type: none;
+}
+
+.carousel-height {
+	height: 100vh;
+}
+
+@media (max-width: 767px) {
+	.carousel-height{
+	height: 70vh;
+}
+}
+
+button:focus, input:focus {
+	outline: 3px solid #c1886d;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 15px;
+  left: 10px;
+  display: none;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #c1886d;
+  opacity: 1;
+    transition: opacity .4s;
+    transition-delay: 0ms;
+}
+
+.scrollTop-content {
+	margin-left: -12px;
+	font-style: normal !important;
+}
+
+</style>
+<body>
+	
+	<!--  -->
+
+	<!-- <div class="loader">
+		<div class="box box0">
+		  <div></div>
+		</div>
+		<div class="box box1">
+		  <div></div>
+		</div>
+		<div class="box box2">
+		  <div></div>
+		</div>
+		<div class="box box3">
+		  <div></div>
+		</div>
+		<div class="box box4">
+		  <div></div>
+		</div>
+		<div class="box box5">
+		  <div></div>
+		</div>
+		<div class="box box6">
+		  <div></div>
+		</div>
+		<div class="box box7">
+		  <div></div>
+		</div>
+		<div class="ground">
+		  <div></div>
+		</div>
+	  </div> -->
+
+	<div class="icon-bar">
+		<a href="https://instagram.com/ln_infra?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa fa-instagram"></i></a>
+		<a href="https://www.facebook.com/LNINFRAVENTURES/" target="_blank"><i class="fa fa-facebook"></i></a>
+		<a href="https://api.whatsapp.com/send/?phone=917741008919" target="_blank"><i class="fa fa-whatsapp"></i></a>		
+	</div>
+
+	<div class="navbar-container">
+		<div class="logo">
+			<a href="#" class="nav-logo"><img src="images/icons/logo.png" alt="Bootstrap" width="60" height="48"></a>
+		</div>
+		<div class="menu-list">
+			<ul class="nav-menu">
+				<li>
+                    <a href="#salient-features" class="nav-link-dummy">About</a>
+				</li>
+			</ul>
+			<ul class="nav-menu">
+				<li>
+                    <a href="#maps" class="nav-link-dummy">Navigation</a>
+				</li>
+			</ul>
+			<ul class="nav-menu">
+				<li>
+                    <a href="#brochure-heading" class="nav-link-dummy">Brochure</a>
+				</li>
+			</ul>
+			<ul class="nav-menu">
+				<li>
+                    <a href="#contact_us" class="nav-link-dummy">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner carousel-height" style="min-width: 100%;">
+			<div class="carousel-item active">
+				<img class="d-block w-100 update-width carousel-height"  src="images/Bhandar_view_night_final.jpg" data-color="firebrick" alt="Second Image">
+				<div class="carousel-caption d-md-block">
+					<h5>Night view</h5>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img class="d-block w-100 update-width carousel-height" src="images/BirdEyeView.jpg" data-color="violet" alt="Third Image">
+				<div class="carousel-caption d-md-block">
+					<h5>Bird-eye view</h5>
+				</div>
+			</div>
+		  	<div class="carousel-item">
+				<img class="d-block w-100 update-width carousel-height" src="images/Bhandar_view_final_02.jpg" data-color="lightblue" alt="First Image">
+				<div class="carousel-caption d-md-block">
+					<h5>Day view</h5>
+				</div>
+			</div>
+		</div>
+		<!-- Controls -->
+		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+
+	<div class="divider"><span></span><span style="display: inline-block;"></span><span></span></div>
+
+	<!-- Back to top button -->
+	<button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+		<i class="scrollTop-content">☝️</i>
+	</button>
+
+	<div style="min-height: 100px;">
+		<p class="text-heading">Bring home the joy of staying at the biggest township of Bhandara, <strong>LN homes.</strong></p>
+	</div>
+	  
+	<h2 id="salient-features">Salient Features on offer</h2>
+	<h3 class="hover-flashcards">(Hover over the flashcards)</h3>
+	<h3 class="click-flashcards">(Click on the flashcards)</h3>
+	<div class="row-cols-1 row.cols row-cols-md-3 g-4 flip-card-flex">
+		<div class="flip-card flashcard-mob-view">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="images/podium-garden-transformed.jpeg" alt="Avatar" style="width:300px;height:300px;">
+				</div>
+				<div class="flip-card-back">
+					<h1 class="heading-text-black">Podium Garden</h1> 
+					<p class="body-text-white">Community hall | Kids zone |</p> 
+					<p class="body-text-white">Landscape Podium Garden | Amphitheatre</p>
+				</div>
+			</div>
+		</div>
+		<div class="flip-card flashcard-mob-view">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="images/secured-township-removebg-preview.png" alt="Avatar" style="width:300px;height:300px;">
+				</div>
+				<div class="flip-card-back">
+					<h1 class="heading-text-white">Secured Township</h1> 
+					<p class="body-text-black">Personalized Parking | Video Door Phone</p> 
+					<p class="body-text-black">Safety Steel Door | Power backup</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row-cols-1 row.cols row-cols-md-3 g-4 flip-card-flex">
+		<div class="flip-card flashcard-mob-view">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="images/location-icon.jpg" alt="Avatar" style="width:300px;height:300px;">
+				</div>
+				<div class="flip-card-back">
+					<h1 class="heading-text-white">Prime Location</h1> 
+					<p class="body-text-black">Near proposed D Mart | Fast growing locality</p> 
+					<p class="body-text-black">Near sanctioned metro line | Other Amenities at close range</p>
+				</div>
+			</div>
+		</div>
+		<div class="flip-card flashcard-mob-view">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="images/finance.png" alt="Avatar" style="width:300px;height:300px;">
+				</div>
+				<div class="flip-card-back">
+					<h1 class="heading-text-black">Easy Finance Facility</h1> 
+					<p class="body-text-white">Spot Finance upto 90%</p> 
+					<p class="body-text-white">Structured loan facility</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="divider"><span></span><span style="display: inline-block;"></span><span></span></div>
+
+	<iframe aria-labelledby="google-maps" id="maps" src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3042.7049642405536!2d79.65768367794495!3d21.186862438148978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3a2b3fa410609b73%3A0x6a2c4fac19a8edd4!2sLN%20HOMES%2C%20STATION%20ROAD%2C%20near%20PROPOSED%20D&#39;MART%2C%20Bhandara%2C%20Maharashtra%20441904!3m2!1d21.1881102!2d79.6607168!5e0!3m2!1sen!2sin!4v1665580619062!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	<div style="text-align: center;">
+		<a href="https://goo.gl/maps/KYguEkCAiiuXuv9u6"  target="_blank" class="cta">
+			<span id="google-maps">Navigate to LN Homes</span>
+			<svg width="13px" height="10px" viewBox="0 0 13 10">
+				<path d="M1,5 L11,5"></path>
+				<polyline points="8 1 12 5 8 9"></polyline>
+			</svg>
+		</a>
+	</div>
+
+	<div class="divider"><span></span><span style="display: inline-block;"></span><span></span></div>
+
+	<h2 class="brochure-content" id="brochure-heading">Get the best out of your investment<span>⚡</span>Secure an asset with minimal fuss</h2>
+	<h3 class="brochure-content-click">(Click on the button below to download brochure)</h3>
+
+	<div style="text-align: center; padding-top: 50px;" id="btn-brochure">
+		<button data-toggle="modal" data-target="#login-modal" aria-label="Click to download LN Homes brochure" class="btn-download" id="btn-auto-click">
+			<div class="arrow"></div>
+		</button>
+	</div>
+
+	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="loginmodal-container">
+				<h2>Verify Mobile Number</h1><br>
+				<form>
+					<div>Enter phone number with country code (For eg. +919876543210)</div>
+					<input type="text" id="phoneNumber">
+					<div id="recaptcha-container"></div>
+					<button type="button" id="sendCode">Send code</button>
+				</form>
+				<div>Enter verification code</div>
+				<form>
+					<input type="text" id="verificationCode">
+					<button type="button" id="verifyCode">Verify code</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="divider"><span></span><span style="display: inline-block;"></span><span></span></div>
+
+	<h2 id="contact-form-heading">Have your say here !</h2>
+	<div class="alert">Thanks for the response. Rest assured, necessary follow-up will be taken.</div>
+	<section class="contact-wrap">
+		<form action="" name="feedback" class="contact-form" id="contact_us">
+			<div class="col-sm-6">
+				<div class="input-block">
+					<input name="firstname" type="text" class="form-control" id="first_name" required>
+					<label for="first_name">First Name*</label>
+					<span id="f-error-msg" class="error-msg"></span>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="input-block">
+					<input name="lastname" type="text" class="form-control" id="last_name" required>
+					<label for="last_name">Last Name*</label>
+					<span id="l-error-msg" class="error-msg"></span>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="input-block">
+					<input name="email" type="email" class="form-control" id="email">
+					<label for="email" class="error-msg">Email</label>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="input-block">
+					<input name="contactno" type="tel" class="form-control" id="contact" required>
+					<label for="contact">Contact No.*</label>
+					<span id="c-error-msg" class="error-msg"></span>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="input-block textarea">
+					<textarea rows="3" type="text" class="form-control" id="feedback"></textarea>
+					<label for="feedback" class="error-msg">Drop your message here</label>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<button class="square-button btn-download" type="submit" id="send">Send</button>
+			</div>
+		</form>
+	</section>
+
+	<div class="divider"><span></span><span style="display: inline-block;"></span><span></span></div>
+
+	<div class="footer-section">
+		<div class="footer-container">
+			<div class="row">
+				<div class="col-3 col-sm-12" style="max-width: 50%">
+					<div class="footer-contact-info">
+						<h3 class="footer-title">Contact info</h3>
+						<ul class="footer-ul">
+							<li><span><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0c-2.761 0-5 2.239-5 5 0 5 5 11 5 11s5-6 5-11c0-2.761-2.239-5-5-5zM8 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"></path></svg></span>LN Homes, Near Proposed D' Mart, Station Road, Bhandara - 441904</li>
+							<li><span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 00-1.02.24l-2.2 2.2a15.045 15.045 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 00-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"></path></svg></span>+91 7741008919</li>
+							<li><span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 00-1.02.24l-2.2 2.2a15.045 15.045 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 00-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"></path></svg></span>+91 7741008949</li>
+							<li><span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg></span>ln.infra1008@gmail.com</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-5  col-sm-12" style="max-width: 50%;">
+					<div class="subscribe">
+						<div class="icon">
+							<img src="images/icons/logo.png" width="60" height="45">
+							<span style="font-size: 24px"> LN Homes </span>
+						</div>
+						<div class="desc">
+							<p>LN Homes is a residential township built by the developers of Sitaram City, another successful township in Bhandara.</p>
+						</div>
+					</div>
+				</div>	   
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-top">
+		<a href="#" class="top"></a>
+	</div>
+
+<!--===============================================================================================-->	
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/downloadPdf.js" type="module"></script>
+	<script src="js/maps.js"></script>
+	<script src="js/navbar.js"></script>
+	<script src="js/backToTop.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+	<script>
+		$('.carousel').carousel({
+			interval: 6000,
+			pause: "false"
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js"></script>
+	<script src="js/feedback.js" type="module"></script>
+	<script type="module">
+		// Import the functions you need from the SDKs you need
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+		import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
+		// TODO: Add SDKs for Firebase products that you want to use
+		// https://firebase.google.com/docs/web/setup#available-libraries
+	  
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		const firebaseConfig = {
+		  apiKey: "AIzaSyBffN9skEGptPDWDA9Gke6fToDJxzngqis",
+		  authDomain: "lninfra-11901.firebaseapp.com",
+		  projectId: "lninfra-11901",
+		  storageBucket: "lninfra-11901.appspot.com",
+		  messagingSenderId: "61258181227",
+		  appId: "1:61258181227:web:076d1c020f02cb6a9c1f2e",
+		  measurementId: "G-YLCJ9ER010"
+		};
+	  
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+		const analytics = getAnalytics(app);
+	</script>
+	<!-- <script>
+		/*
+*   A simple loading icon based on my 
+*   own logo that I use for reddit and
+*   GitHub. Made entirely with CSS components
+*   with no external resources. Click the
+*   loader to view the original logo.
+*
+*   Yes, it's based on the Photoshop logo.
+*/
+
+var full=false;
+
+function fill(){
+  full=!full;
+  document.getElementById("logocontainer").style.backgroundColor=full?"#3ebffa":"transparent";
+}
+		document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  "body").style.visibility = "hidden";
+                document.querySelector(
+                  ".loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  ".loader").style.display = "none";
+                document.querySelector(
+                  "body").style.visibility = "visible";
+            }
+        };
+	</script> -->
+<!--===============================================================================================-->
+</body>
+</html>
