@@ -1,8 +1,6 @@
 @media (max-width: 767px) and (min-width: 324px) {
 	.flashcard-mob-view {
-		padding-left: calc(23% - 40px) !important;
-		padding-top: 20px !important;
-		width: 22.3rem !important;
+		margin: auto;
 	}
 }
 
