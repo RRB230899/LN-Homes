@@ -248,3 +248,8 @@ button:focus .arrow:before {
   text-align:center;
   margin-top: 50px;
 }
+
+.modal-button {
+  display: flex;
+  margin: auto;
+}

@@ -13,9 +13,9 @@
 
 @media (max-width: 767px) {
 	.icon-bar {
-	-webkit-transform: translate(25%, 75%);
-	-ms-transform: translateY(25%, 75%);
-	transform: translate(25%, 75%);
+	-webkit-transform: translate(35%, 75%);
+	-ms-transform: translateY(35%, 75%);
+	transform: translate(35%, 75%);
 }
 }
 

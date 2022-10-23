@@ -71,7 +71,7 @@ li {
 }
 
 button:focus, input:focus {
-	outline: 3px solid #c1886d;
+	outline: 2px solid #c1886d;
 }
 
 #btn-back-to-top {
@@ -98,36 +98,6 @@ button:focus, input:focus {
 <body>
 	
 	<!--  -->
-
-	<!-- <div class="loader">
-		<div class="box box0">
-		  <div></div>
-		</div>
-		<div class="box box1">
-		  <div></div>
-		</div>
-		<div class="box box2">
-		  <div></div>
-		</div>
-		<div class="box box3">
-		  <div></div>
-		</div>
-		<div class="box box4">
-		  <div></div>
-		</div>
-		<div class="box box5">
-		  <div></div>
-		</div>
-		<div class="box box6">
-		  <div></div>
-		</div>
-		<div class="box box7">
-		  <div></div>
-		</div>
-		<div class="ground">
-		  <div></div>
-		</div>
-	  </div> -->
 
 	<div class="icon-bar">
 		<a href="https://instagram.com/ln_infra?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa fa-instagram"></i></a>
@@ -299,14 +269,14 @@ button:focus, input:focus {
 				<h2>Verify Mobile Number</h1><br>
 				<form>
 					<div>Enter phone number with country code (For eg. +919876543210)</div>
-					<input type="text" id="phoneNumber">
+					<input type="text" id="phoneNumber" style="border: 2px solid #c1886d">
 					<div id="recaptcha-container"></div>
-					<button type="button" id="sendCode">Send code</button>
+					<button type="button" id="sendCode" class="modal-button">Send code</button>
 				</form>
-				<div>Enter verification code</div>
+				<div style="padding-top: 10px;">Enter verification code</div>
 				<form>
-					<input type="text" id="verificationCode">
-					<button type="button" id="verifyCode">Verify code</button>
+					<input type="text" id="verificationCode" style="border: 2px solid #c1886d">
+					<button type="button" id="verifyCode" class="modal-button">Verify code</button>
 				</form>
 			</div>
 		</div>
