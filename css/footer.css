@@ -81,5 +81,6 @@
     }
     .footer-section .footer-title::after {
         left: 25% !important;
+        margin-left: -5px;
     }
 }

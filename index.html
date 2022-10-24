@@ -27,6 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="css/contact_form.css">
 	<link rel="stylesheet" type="text/css" href="css/socialLinks.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"/>
 <!--===============================================================================================-->
 </head>
 <style>
@@ -276,15 +277,15 @@ button:hover {
 			<div class="loginmodal-container">
 				<h2>Verify Mobile Number</h1><br>
 				<form>
-					<div>Enter phone number with country code (For eg. +919876543210)</div>
-					<input type="text" id="phoneNumber" style="border: 2px solid #c1886d">
+					<div>Enter phone number</div>
+					<input type="tel" id="phoneNumber" style="border: 2px solid #c1886d">
 					<div id="recaptcha-container"></div>
 					<button type="button" id="sendCode" class="modal-button">Send code</button>
 				</form>
 				<div style="padding-top: 10px;">Enter verification code</div>
 				<form>
 					<input type="text" id="verificationCode" style="border: 2px solid #c1886d">
-					<button type="button" id="verifyCode" class="modal-button">Verify code</button>
+					<button type="submit" id="verifyCode" class="modal-button">Verify code</button>
 				</form>
 			</div>
 		</div>
@@ -359,8 +360,8 @@ button:hover {
 						</div>
 						<div class="desc">
 							<p>LN Homes is the biggest residential township being developed in Bhandara town.</p>
-							<p>LN Homes is going to deliver what is promised.</p>
-							<a href="https://maharerait.mahaonline.gov.in/SearchList/Search" target="_blank"><img src="images/MahaRera.jpg" width="50" height="30" style="padding-right: 10px">P50600045833</a>
+							<p>LN Homes is going to deliver what is being promised.</p>
+							<a href="https://maharerait.mahaonline.gov.in/SearchList/Search" target="_blank"><img src="images/MahaRera.jpg" width="60" height="40" style="padding-right: 10px">P50600045833</a>
 						</div>
 					</div>
 				</div>	   
@@ -377,6 +378,7 @@ button:hover {
 	<script src="js/maps.js"></script>
 	<script src="js/navbar.js"></script>
 	<script src="js/backToTop.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/tilt/tilt.jquery.min.js"></script>
 	<script>

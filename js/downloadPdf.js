@@ -15,24 +15,43 @@ const firebaseConfig = {
   };
 initializeApp(firebaseConfig);
 
+//get the IP for country input
+function getIp(callback) {
+    fetch('https://ipinfo.io/json?token=eb39f399f1b912', { headers: { 'Accept': 'application/json' }})
+      .then((resp) => resp.json())
+      .catch(() => {
+        return {
+          country: 'us',
+        };
+      })
+      .then((resp) => callback(resp.country));
+   }
+
 document.getElementById("sendCode").addEventListener('click', phoneAuth);
 document.getElementById("verifyCode").addEventListener('click', codeVerify);
 
 const auth = getAuth();
+//invisible recaptcha
 window.recaptchaVerifier = new RecaptchaVerifier('sendCode', {
     'size': 'invisible',
     'callback': (response) => {
       // reCAPTCHA solved, allow signInWithPhoneNumber.
+      console.log(response);
       onSignInSubmit();
     }
   }, auth);
 
+const phoneInputField = document.querySelector("#phoneNumber");
+//int-tel-input phone Number based on current location
+const phoneInput = window.intlTelInput(phoneInputField, {
+    initialCountry: "auto",
+    geoIpLookup: getIp,
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+  });
+
 function DownloadFile(fileName) {
     //Set the File URL.
-
-    console.log("inside LN Homes")
-
-    
 
     var url = "images/" + fileName;
 
@@ -64,10 +83,10 @@ function DownloadFile(fileName) {
 
 function phoneAuth() {
 
-    var phoneNumber = document.getElementById('phoneNumber').value;
+    var phoneNumber = phoneInput.getNumber();
     var appVerifier = window.recaptchaVerifier;
     var auth = getAuth();
-signInWithPhoneNumber(auth, phoneNumber, appVerifier)
+    signInWithPhoneNumber(auth, phoneNumber, appVerifier)
     .then((confirmationResult) => {
       // SMS sent. Prompt user to type the code from the message, then sign the
       // user in with confirmationResult.confirm(code).
