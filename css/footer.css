@@ -64,4 +64,22 @@
     text-align: center;
     margin-bottom: 1rem;
     font-weight: 300;
+    line-height: 1 !important;
+}
+
+.custom-style {
+    max-width: 50%;
+}
+
+@media(max-width: 767px) {
+    .center-align {
+        text-align: center;
+}
+    .custom-style {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .footer-section .footer-title::after {
+        left: 25% !important;
+    }
 }
