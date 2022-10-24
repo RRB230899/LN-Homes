@@ -39,6 +39,7 @@ function sendFeedback(event) {
     if(first_name && last_name && contact && validatePhoneNumber(contact.toString())){
     
     saveFeedback(first_name, last_name, email, contact, feedback);
+    resetErrorMsg();
     document.querySelector(".alert").style.display = 'block';
 
     //Hide alert
