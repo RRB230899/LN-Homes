@@ -94,9 +94,10 @@ function codeVerify() {
     // User signed in successfully.
     document.getElementById('phoneNumber').value = '';
     document.getElementById('verificationCode').value = '';
-    alert("Code validated")
-    DownloadFile('LN Homes Brochure .pdf')
     $('#login-modal').modal('hide');
+    location.reload(false);
+    DownloadFile('LN Homes Brochure .pdf');
+    alert("Code validated");
     saveVerificationDetails(phNo);
     // ...
     }).catch((error) => {
@@ -118,6 +119,8 @@ function saveVerificationDetails(phNo) {
     }
     const updates = {};
     updates['/Brochure/' + phNo] = phoneDataGlobal;
+
+    location.reload(false);
 
     return update(ref(db), updates)
 }
