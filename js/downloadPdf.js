@@ -95,7 +95,6 @@ function codeVerify() {
     document.getElementById('phoneNumber').value = '';
     document.getElementById('verificationCode').value = '';
     $('#login-modal').modal('hide');
-    location.reload(false);
     DownloadFile('LN Homes Brochure .pdf');
     alert("Code validated");
     saveVerificationDetails(phNo);
