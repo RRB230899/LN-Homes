@@ -1,6 +1,6 @@
 import { getAuth, signInWithPhoneNumber, RecaptchaVerifier } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-import { ref, update } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
+import { ref, update, onValue } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
 import { db } from "./feedback.js";
 
 const firebaseConfig = {
@@ -56,29 +56,12 @@ function DownloadFile(fileName) {
     var url = "images/" + fileName;
 
     //Create XMLHTTP Request.
-    var req = new XMLHttpRequest();
-    req.open("GET", url, true);
-    req.responseType = "blob";
-    req.onload = function () {
-        //Convert the Byte Data to BLOB object.
-        var blob = new Blob([req.response], { type: "application/octetstream" });
-
-        //Check the Browser type and download the File.
-        var isIE = false || !!document.documentMode;
-        if (isIE) {
-            window.navigator.msSaveBlob(blob, fileName);
-        } else {
-            var url = window.URL || window.webkitURL;
-            var link = url.createObjectURL(blob);
-            var a = document.createElement("a");
-            a.setAttribute("download", fileName);
-            a.setAttribute("href", link);
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-    };
-    req.send();
+    const a = document.createElement('a')
+    a.href = url
+    a.download = url.split('/').pop()
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
 };
 
 function phoneAuth() {
@@ -130,11 +113,11 @@ function getCodeFromUserInput() {
 }
 
 function saveVerificationDetails(phNo) {
-    var phoneData = {
+    const phoneDataGlobal = {
         phoneNumber: phNo
     }
-    var updates = {};
-    updates['/Brochure/' + phNo] = phoneData;
+    const updates = {};
+    updates['/Brochure/' + phNo] = phoneDataGlobal;
 
     return update(ref(db), updates)
 }
