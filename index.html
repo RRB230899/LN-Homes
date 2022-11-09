@@ -276,14 +276,14 @@ button:hover {
 		<div class="modal-dialog">
 			<div class="loginmodal-container">
 				<h2>Verify Mobile Number</h1><br>
-				<form>
+				<form onsubmit="return false">
 					<div>Enter phone number</div>
 					<input type="tel" id="phoneNumber" style="border: 2px solid #c1886d">
 					<div id="recaptcha-container"></div>
 					<button type="button" id="sendCode" class="modal-button">Send code</button>
 				</form>
 				<div style="padding-top: 10px;">Enter verification code</div>
-				<form>
+				<form onsubmit="return false">
 					<input type="number" id="verificationCode" style="border: 2px solid #c1886d">
 					<button type="button" id="verifyCode" class="modal-button">Verify code</button>
 				</form>

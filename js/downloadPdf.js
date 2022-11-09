@@ -92,12 +92,11 @@ function codeVerify() {
     var phNo = document.getElementById('phoneNumber').value;
     confirmationResult.confirm(code).then(() => {
     // User signed in successfully.
-    document.getElementById('phoneNumber').value = '';
+    saveVerificationDetails(phNo);
     document.getElementById('verificationCode').value = '';
     $('#login-modal').modal('hide');
     DownloadFile('LN Homes Brochure .pdf');
     alert("Code validated");
-    saveVerificationDetails(phNo);
     // ...
     }).catch((error) => {
     // User couldn't sign in (bad verification code?)
@@ -113,13 +112,12 @@ function getCodeFromUserInput() {
 }
 
 function saveVerificationDetails(phNo) {
+    console.log(phNo);
     const phoneDataGlobal = {
         phoneNumber: phNo
     }
     const updates = {};
     updates['/Brochure/' + phNo] = phoneDataGlobal;
-
-    location.reload(false);
 
     return update(ref(db), updates)
 }
