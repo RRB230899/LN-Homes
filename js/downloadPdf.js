@@ -36,7 +36,6 @@ window.recaptchaVerifier = new RecaptchaVerifier('sendCode', {
     'size': 'invisible',
     'callback': (response) => {
       // reCAPTCHA solved, allow signInWithPhoneNumber.
-      console.log(response);
       onSignInSubmit();
     }
   }, auth);
